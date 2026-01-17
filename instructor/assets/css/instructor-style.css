@@ -1,0 +1,691 @@
+/* Instructor Dashboard Custom Styles */
+
+/* Instructor specific color scheme */
+:root {
+  --instructor-primary: #8b0000;
+  --instructor-primary-light: #8b0000;
+  --instructor-primary-dark: #8b0000;
+  --instructor-secondary: #6c757d;
+  --instructor-success: #28a745;
+  --instructor-warning: #ffc107;
+  --instructor-info: #17a2b8;
+  --instructor-light: #f8f9fa;
+  --instructor-dark: #343a40;
+}
+
+/* Icon Color Override - Make all icons red */
+.fas, .far, .fab, .fa, i[class*="fa-"] {
+  color: var(--instructor-primary) !important;
+}
+
+/* Specific icon color overrides */
+.text-primary i,
+.text-primary .fas,
+.text-primary .far,
+.text-primary .fab,
+.text-primary .fa {
+  color: var(--instructor-primary) !important;
+}
+
+.text-success i,
+.text-success .fas,
+.text-success .far,
+.text-success .fab,
+.text-success .fa {
+  color: var(--instructor-primary) !important;
+}
+
+.text-warning i,
+.text-warning .fas,
+.text-warning .far,
+.text-warning .fab,
+.text-warning .fa {
+  color: var(--instructor-primary) !important;
+}
+
+.text-info i,
+.text-info .fas,
+.text-info .far,
+.text-info .fab,
+.text-info .fa {
+  color: var(--instructor-primary) !important;
+}
+
+.text-muted i,
+.text-muted .fas,
+.text-muted .far,
+.text-muted .fab,
+.text-muted .fa {
+  color: var(--instructor-primary) !important;
+}
+
+/* Sidebar icons */
+.sidebar-nav .nav-link i {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.sidebar-nav .nav-link:hover i {
+  color: white !important;
+}
+
+.sidebar-nav .nav-link.active i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Button icons */
+.btn i,
+.btn .fas,
+.btn .far,
+.btn .fab,
+.btn .fa {
+  color: inherit !important;
+}
+
+/* Card header icons */
+.instructor-card-header i,
+.course-card-header i {
+  color: white !important;
+}
+
+/* Stat card icons */
+.stat-icon i {
+  color: white !important;
+}
+
+/* Activity icons */
+.activity-icon i {
+  color: white !important;
+}
+
+/* Quick stat icons */
+.quick-stat-icon i {
+  color: white !important;
+}
+
+/* Table icons */
+.instructor-table i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Form icons */
+.form-control + i,
+.input-group-text i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Badge icons */
+.badge i {
+  color: inherit !important;
+}
+
+/* Dropdown icons */
+.dropdown-item i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Mobile topbar icons */
+.mobile-topbar i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Override specific colored icons that should stay white */
+.sidebar-nav .nav-link i,
+.instructor-card-header i,
+.course-card-header i,
+.stat-icon i,
+.activity-icon i,
+.quick-stat-icon i {
+  color: white !important;
+}
+
+/* Override button icons to inherit button color */
+.btn-danger i,
+.btn-outline-danger i,
+.btn-primary i,
+.btn-outline-primary i,
+.btn-secondary i,
+.btn-outline-secondary i {
+  color: inherit !important;
+}
+
+/* Dashboard Statistics Cards - Force red background with white icons */
+.stat-card .stat-icon {
+  background-color: var(--instructor-primary) !important;
+  color: white !important;
+}
+
+.stat-card .stat-icon i {
+  color: white !important;
+}
+
+/* Override all stat icon color classes */
+.stat-icon.primary,
+.stat-icon.success,
+.stat-icon.warning,
+.stat-icon.info,
+.stat-icon.danger {
+  background-color: var(--instructor-primary) !important;
+  color: white !important;
+}
+
+.stat-icon.primary i,
+.stat-icon.success i,
+.stat-icon.warning i,
+.stat-icon.info i,
+.stat-icon.danger i {
+  color: white !important;
+}
+
+/* Additional specificity for dashboard cards */
+.col-xl-3 .stat-card .stat-icon,
+.col-md-6 .stat-card .stat-icon {
+  background-color: var(--instructor-primary) !important;
+  color: white !important;
+}
+
+.col-xl-3 .stat-card .stat-icon i,
+.col-md-6 .stat-card .stat-icon i {
+  color: white !important;
+}
+
+/* Additional icon overrides for comprehensive coverage */
+/* All Font Awesome icons in content areas */
+.content-wrapper i,
+.instructor-card i,
+.course-card i,
+.assignment-card i,
+.student-item i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Override any remaining colored icons */
+.text-danger i,
+.text-danger .fas,
+.text-danger .far,
+.text-danger .fab,
+.text-danger .fa {
+  color: var(--instructor-primary) !important;
+}
+
+/* Ensure all icons in tables are red */
+.table i,
+.table .fas,
+.table .far,
+.table .fab,
+.table .fa {
+  color: var(--instructor-primary) !important;
+}
+
+/* Ensure all icons in forms are red */
+.form-group i,
+.form-control + i,
+.input-group i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Ensure all icons in cards are red */
+.card i,
+.card .fas,
+.card .far,
+.card .fab,
+.card .fa {
+  color: var(--instructor-primary) !important;
+}
+
+/* Override any Bootstrap color classes for icons */
+.text-primary i,
+.text-secondary i,
+.text-success i,
+.text-danger i,
+.text-warning i,
+.text-info i,
+.text-light i,
+.text-dark i,
+.text-muted i {
+  color: var(--instructor-primary) !important;
+}
+
+/* Dashboard Cards */
+.instructor-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.instructor-card-header {
+  background: linear-gradient(135deg, var(--instructor-primary) 0%, var(--instructor-primary-dark) 100%);
+  color: white;
+  border-radius: 15px 15px 0 0;
+  padding: 1.5rem;
+}
+
+.instructor-card-body {
+  padding: 2rem;
+}
+
+/* Course Cards */
+.course-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card-header {
+  background: var(--instructor-primary);
+  color: white;
+  padding: 1rem 1.5rem;
+}
+
+.course-card-body {
+  padding: 1.5rem;
+}
+
+/* Student List */
+.student-item {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.student-item:hover {
+  border-color: var(--instructor-primary);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.1);
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--instructor-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Attendance System */
+.attendance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.attendance-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.attendance-item:hover {
+  border-color: var(--instructor-primary);
+}
+
+.attendance-status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+}
+
+.attendance-status.present {
+  background: var(--instructor-success);
+}
+
+.attendance-status.absent {
+  background: var(--instructor-primary);
+}
+
+.attendance-status.late {
+  background: var(--instructor-warning);
+}
+
+/* Assignment Cards */
+.assignment-card {
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.assignment-card:hover {
+  border-color: var(--instructor-primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.assignment-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.assignment-status.submitted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.assignment-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.assignment-status.overdue {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Statistics Cards */
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--instructor-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--instructor-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.stat-icon.primary {
+  background: var(--instructor-primary);
+}
+
+.stat-icon.success {
+  background: var(--instructor-success);
+}
+
+.stat-icon.warning {
+  background: var(--instructor-warning);
+}
+
+.stat-icon.info {
+  background: var(--instructor-info);
+}
+
+/* Buttons */
+.btn-instructor {
+  background: var(--instructor-primary);
+  border-color: var(--instructor-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-instructor:hover {
+  background: var(--instructor-primary-dark);
+  border-color: var(--instructor-primary-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+.btn-outline-instructor {
+  color: var(--instructor-primary);
+  border-color: var(--instructor-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-instructor:hover {
+  background: var(--instructor-primary);
+  border-color: var(--instructor-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+/* Tables */
+.instructor-table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-table th {
+  background: var(--instructor-primary);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.instructor-table td {
+  padding: 1rem;
+  border-color: #e9ecef;
+}
+
+.instructor-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Progress Bars */
+.progress-instructor {
+  height: 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar-instructor {
+  background: var(--instructor-primary);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Badges */
+.badge-instructor {
+  background: var(--instructor-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: var(--instructor-success);
+}
+
+.badge-warning {
+  background: var(--instructor-warning);
+  color: #212529;
+}
+
+.badge-danger {
+  background: var(--instructor-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .instructor-card-body {
+    padding: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .attendance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .instructor-table th,
+  .instructor-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .instructor-card-header {
+    padding: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .btn-instructor,
+  .btn-outline-instructor {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom Button Styles */
+.btn-danger {
+  background-color: var(--instructor-primary) !important;
+  border-color: var(--instructor-primary) !important;
+  color: white !important;
+}
+
+.btn-danger:hover {
+  background-color: var(--instructor-primary-dark) !important;
+  border-color: var(--instructor-primary-dark) !important;
+  color: white !important;
+}
+
+.btn-outline-danger {
+  color: var(--instructor-primary) !important;
+  border-color: var(--instructor-primary) !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--instructor-primary) !important;
+  border-color: var(--instructor-primary) !important;
+  color: white !important;
+}
+
+.btn-danger:focus,
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25) !important;
+}
+
+/* Attendance Status Styling */
+.attendance-status {
+  text-align: center !important;
+  font-weight: 500;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.attendance-status:focus {
+  border-color: var(--instructor-primary);
+  box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25);
+}
+
+.attendance-status option {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Time Input Styling */
+input[type="time"] {
+  text-align: center !important;
+  font-weight: 500;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input[type="time"]:focus {
+  border-color: var(--instructor-primary);
+  box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25);
+}
+
+/* Table Cell Centering */
+.instructor-table td.text-center {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Status Badge Styling */
+.status-present {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-absent {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-late {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-excused {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}

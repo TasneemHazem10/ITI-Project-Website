@@ -1,0 +1,80 @@
+/* Statistics Cards - Red Background with White Icons */
+
+/* Force all stat icons to have red background and white icons */
+.stat-card .stat-icon {
+  background-color: #8b0000 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 1rem auto !important;
+}
+
+.stat-card .stat-icon i {
+  color: white !important;
+  font-size: 1.5rem !important;
+}
+
+/* Override all stat icon color classes */
+.stat-icon.primary {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.success {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.warning {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.info {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.danger {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+/* Override any button classes on stat icons */
+.stat-icon i.btn-primary,
+.stat-icon .btn-primary {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Additional specificity for dashboard cards */
+.col-xl-3 .stat-card .stat-icon,
+.col-md-6 .stat-card .stat-icon {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.col-xl-3 .stat-card .stat-icon i,
+.col-md-6 .stat-card .stat-icon i {
+  color: white !important;
+}
+
+/* Ensure stat numbers and labels are properly styled */
+.stat-number {
+  color: #2c3e50 !important;
+  font-weight: bold !important;
+  font-size: 2rem !important;
+}
+
+.stat-label {
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 0 !important;
+}

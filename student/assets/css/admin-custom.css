@@ -1,0 +1,125 @@
+/* Admin Custom Styles */
+
+/* Nav Tabs Styling */
+.nav-tabs .nav-link.active {
+    color: #dc3545 !important;
+    border-color: #dc3545 #dc3545 #fff !important;
+    background-color: #fff !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d !important;
+}
+
+/* Fix for Arabic text spacing in navbar */
+.top-navbar h4 {
+    margin-right: 15px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+/* Responsive spacing for Arabic */
+@media (max-width: 768px) {
+    .top-navbar h4 {
+        max-width: 150px;
+        font-size: 1rem;
+    }
+}
+
+/* Ensure proper spacing between menu button and title */
+.top-navbar .d-flex.align-items-center:first-child {
+    gap: 15px;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 576px) {
+    .top-navbar h4 {
+        max-width: 120px;
+        font-size: 0.9rem;
+    }
+    
+    .top-navbar .d-flex.align-items-center:first-child {
+        gap: 10px;
+    }
+}
+
+/* Mobile sidebar toggle + backdrop */
+.mobile-topbar {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.mobile-topbar .mobile-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+#sidebarBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1050;
+  transition: opacity 0.25s ease;
+}
+
+/* show/hide helpers */
+.sidebar.show {
+  transform: translateX(0) !important;
+  /* ensure it's above content on mobile */
+  z-index: 1100;
+}
+
+/* when backdrop is visible remove pointer events from content behind */
+.sidebar-backdrop.d-block {
+  display: block;
+}
+
+/* small adjustments for collapsed mobile sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 260px; /* narrow on mobile if you want */
+    transform: translateX(-100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  [dir="rtl"] .sidebar {
+    transform: translateX(100%);
+    right: 0;
+    left: auto;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  /* make dropdown menu items look good inside collapse */
+  .sidebar .dropdown-menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sidebar .dropdown-item {
+    padding: .6rem 1.25rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .top-navbar {
+    display: none !important;
+  }
+.sidebar.show {
+    transform: translateX(0);
+    z-index: 1200;
+  }
+}

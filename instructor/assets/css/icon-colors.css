@@ -1,0 +1,110 @@
+/* Icon Colors Override - Make all icons red */
+
+/* Global icon color override */
+.fas, .far, .fab, .fa, i[class*="fa-"] {
+  color: #8b0000 !important;
+}
+
+/* Override all text color classes for icons */
+.text-primary i, .text-primary .fas, .text-primary .far, .text-primary .fab, .text-primary .fa,
+.text-secondary i, .text-secondary .fas, .text-secondary .far, .text-secondary .fab, .text-secondary .fa,
+.text-success i, .text-success .fas, .text-success .far, .text-success .fab, .text-success .fa,
+.text-danger i, .text-danger .fas, .text-danger .far, .text-danger .fab, .text-danger .fa,
+.text-warning i, .text-warning .fas, .text-warning .far, .text-warning .fab, .text-warning .fa,
+.text-info i, .text-info .fas, .text-info .far, .text-info .fab, .text-info .fa,
+.text-light i, .text-light .fas, .text-light .far, .text-light .fab, .text-light .fa,
+.text-dark i, .text-dark .fas, .text-dark .far, .text-dark .fab, .text-dark .fa,
+.text-muted i, .text-muted .fas, .text-muted .far, .text-muted .fab, .text-muted .fa {
+  color: #8b0000 !important;
+}
+
+/* Keep sidebar icons white for contrast */
+.sidebar-nav .nav-link i {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.sidebar-nav .nav-link:hover i {
+  color: white !important;
+}
+
+.sidebar-nav .nav-link.active i {
+  color: #8b0000 !important;
+}
+
+/* Keep card header icons white */
+.instructor-card-header i,
+.course-card-header i,
+.card-header i {
+  color: white !important;
+}
+
+/* Dashboard Statistics Cards - Red icons with white background */
+.stat-card .stat-icon {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-card .stat-icon i {
+  color: white !important;
+}
+
+/* Override any colored stat icons to be red background with white icon */
+.stat-icon.primary {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.success {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.warning {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.info {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon.danger {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+/* Ensure all stat icons have red background and white icons */
+.stat-icon {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.stat-icon i {
+  color: white !important;
+}
+
+/* Override any button classes on stat icons */
+.stat-icon i.btn-primary,
+.stat-icon .btn-primary {
+  background-color: #8b0000 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Additional specificity for dashboard stat cards */
+.col-xl-3 .stat-card .stat-icon,
+.col-md-6 .stat-card .stat-icon {
+  background-color: #8b0000 !important;
+  color: white !important;
+}
+
+.col-xl-3 .stat-card .stat-icon i,
+.col-md-6 .stat-card .stat-icon i {
+  color: white !important;
+}
+
+/* Button icons inherit button color */
+.btn i {
+  color: inherit !important;
+}

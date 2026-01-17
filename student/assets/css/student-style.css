@@ -1,0 +1,313 @@
+/* Student Panel Custom Styles */
+
+/* Student-specific color variables */
+:root {
+    --student-primary: #8b0000;
+    --student-primary-light: #a52a2a;
+    --student-primary-dark: #5a0000;
+    --student-secondary: #6c757d;
+    --student-success: #28a745;
+    --student-warning: #ffc107;
+    --student-info: #17a2b8;
+    --student-light: #f8f9fa;
+    --student-dark: #343a40;
+}
+
+/* Assignment Cards */
+.assignment-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    margin-bottom: 1.5rem;
+}
+
+.assignment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.assignment-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.assignment-status.submitted {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.assignment-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.assignment-status.overdue {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Student Avatar */
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--student-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Ranking Table Styles */
+.instructor-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.instructor-table tbody tr[style*="background"] {
+    border-left: 4px solid var(--student-primary);
+}
+
+/* Problem Report Form */
+#problemReportForm .form-control:focus,
+#problemReportForm .form-select:focus {
+    border-color: var(--student-primary);
+    box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25);
+}
+
+#problemReportForm .btn-danger {
+    background-color: var(--student-primary);
+    border-color: var(--student-primary);
+}
+
+#problemReportForm .btn-danger:hover {
+    background-color: var(--student-primary-dark);
+    border-color: var(--student-primary-dark);
+}
+
+/* File Upload Styling */
+#problemImages {
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+#problemImages:hover {
+    border-color: var(--student-primary);
+    background-color: #f8f9fa;
+}
+
+#problemImages:focus {
+    border-color: var(--student-primary);
+    box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25);
+}
+
+/* Badge Styles */
+.badge-instructor {
+    background-color: var(--student-primary);
+    color: white;
+}
+
+.badge-success {
+    background-color: var(--student-success);
+}
+
+.badge-warning {
+    background-color: var(--student-warning);
+    color: #212529;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+.badge-info {
+    background-color: var(--student-info);
+}
+
+.badge-secondary {
+    background-color: var(--student-secondary);
+}
+
+/* Progress Bars */
+.progress-instructor {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-instructor {
+    height: 100%;
+    background-color: var(--student-primary);
+    transition: width 0.3s ease;
+}
+
+/* Course Module Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: var(--student-primary);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Achievement List */
+.achievement-list .d-flex {
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.achievement-list .d-flex:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+/* Attendance Legend */
+.attendance-legend {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.attendance-legend .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .assignment-card {
+        padding: 1rem;
+    }
+    
+    .student-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .assignment-status {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .instructor-table {
+        font-size: 0.9rem;
+    }
+    
+    .instructor-table th,
+    .instructor-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .assignment-card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .instructor-card-body {
+        padding: 1rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--student-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--student-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--student-primary-dark);
+}
+
