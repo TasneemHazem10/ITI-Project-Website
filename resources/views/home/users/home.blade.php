@@ -89,7 +89,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card course-card h-100 shadow-lg">
                         <div class="course-image-container">
-                            <img src="{{ $course->image ? asset('storage/images/'.$course->image) : asset('home/assets/images/iti_logo.svg') }}" class="card-img-top course-image" alt="{{ $course->course_name }}">
+                            <img src="{{ $course->image ? asset('storage/'.$course->image) : asset('home/assets/images/iti_logo.svg') }}" class="card-img-top course-image" alt="{{ $course->course_name }}">
                             <div class="course-overlay">
                                 <div class="course-badge">Featured</div>
                                 <div class="course-duration">

@@ -15,13 +15,13 @@ use App\Http\Controllers\Student\studentcontroller as StudentStudentcontroller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('prevent.back')->group(function () {
 
     // Redirect admin root to dashboard if authenticated, else to login
     Route::get('/', function () {
         if (Auth::guard('web_admin')->check()) {
             return redirect()->route('admin.dashboard');
-        }   
+        }
         return redirect()->route('admin.login');
     });
 
@@ -33,7 +33,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
     
 
-    Route::middleware('admin.auth')->group(function () {
+    Route::middleware(['admin.auth','prevent.back'])->group(function () {
         Route::controller(AdminController::class)->group(function () {
             Route::get('/dashboard', 'dashboard')->name('dashboard');
             Route::get('/add-admin', 'add_admin')->name('add.admin');
@@ -80,7 +80,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 Route::get('/', WelcomeController::class)->name('home'); 
 
-Route::prefix('home')->name('home.')->group(function () {
+Route::prefix('home')->name('home.')->middleware('prevent.back')->group(function () {
     // Public routes
     Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
     Route::get('/userLog', [HomeController::class, 'userLog'])->name('userLog');
@@ -101,7 +101,7 @@ Route::prefix('home')->name('home.')->group(function () {
     
     Route::get('/show/{id}', [HomeController::class, 'show'])->name('show');
 
-    Route::middleware('auth:web_student')->group(function () {
+    Route::middleware(['auth:web_student','prevent.back'])->group(function () {
         Route::get('/upload', [HomeController::class, 'upload'])->name('upload');
         Route::get('/wait', [HomeController::class, 'wait'])->name('wait');
         Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
@@ -111,7 +111,7 @@ Route::prefix('home')->name('home.')->group(function () {
     });
 });
 
-Route::prefix('instructor')->name('instructor.')->middleware('auth:web_instructor')->controller(instructController::class)->group(function () {
+Route::prefix('instructor')->name('instructor.')->middleware(['auth:web_instructor','prevent.back'])->controller(instructController::class)->group(function () {
     Route::get('/courses-details', 'courses_details')->name('courses_details');
     Route::get('/courses', 'courses')->name('courses');
     Route::get('/dashboard/{id}', 'dashboard')->name('dashboard');

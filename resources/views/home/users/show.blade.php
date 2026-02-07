@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <!-- Course Image -->
                         <div class="text-center mb-4">
-                           <img src="{{ $course->image ? asset('storage/images/'.$course->image) : asset('home/assets/images/iti_logo.svg') }}" alt="Course Image" class="img-fluid rounded" style="max-height: 300px;">
+                           <img src="{{ $course->image ? asset('storage/'.$course->image) : asset('home/assets/images/iti_logo.svg') }}" alt="Course Image" class="img-fluid rounded" style="max-height: 300px;">
                         </div>
 
                         <!-- Course Description -->
