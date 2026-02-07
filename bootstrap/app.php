@@ -15,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'admin.auth' => \App\Http\Middleware\AdminAuthMiddleware::class,
             'student.verified' => \App\Http\Middleware\StudentVerificationMiddleware::class,
+            'prevent.back' => \App\Http\Middleware\PreventBackHistory::class,
         ]);
 
         $middleware->redirectGuestsTo(function (Request $request) {

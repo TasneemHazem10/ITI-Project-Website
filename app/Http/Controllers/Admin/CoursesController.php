@@ -98,8 +98,8 @@ class CoursesController extends Controller
         }
 
         // Handle boolean fields properly
-        $data['certificate'] = $request->input('certificate', 0);
-        $data['featured'] = $request->input('featured', 0);
+        $data['certificate'] = $request->boolean('certificate');
+        $data['featured'] = $request->boolean('featured');
 
         $course->update($data);
 
